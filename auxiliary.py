@@ -38,7 +38,7 @@ def calculate_score(cards: list):
         scores.remove(deck.get('A1'))
         scores.append(deck.get('A2'))
 
-    return sum(cards)
+    return sum(scores)
 
 
 if __name__ == '__main__':
