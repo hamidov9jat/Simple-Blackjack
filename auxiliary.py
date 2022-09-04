@@ -21,7 +21,7 @@ def clear_console():
 
 def deal_card():
     """Returns a random card from the deck"""
-    card = random.choice(deck)
+    card = random.choice(tuple(deck))
     return card
 
 
@@ -85,8 +85,7 @@ def run_game():
 
     while not is_game_over:
         print(f"\t\tYour cards: {user_cards}, current score: {user_score}\n")
-        print(f"\t\tComputer's first card: {computer_cards[0]} "
-              f"and it's scoer is {deck.get(computer_cards[0])}\n")
+        print(f"\t\tComputer's first card: [{computer_cards[0]}] and it's score is {deck.get(computer_cards[0])}\n")
 
         # If either user or computer has blackjack, or exceeds 21
         if user_score == 0 or computer_score == 0 or user_score > 21:
